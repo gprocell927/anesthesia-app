@@ -7,3 +7,5 @@ const readings = (state=[], action) => {
     return state
   }
 }
+
+export default readings 
