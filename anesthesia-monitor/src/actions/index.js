@@ -6,9 +6,16 @@ export const addReading = (text, id) => {
   }
 }
 
+export const toggleReading = (id) => {
+  return {
+    type: 'TOGGLE_READING',
+    id
+  }
+}
+
 export const setFilter = (filter) => {
   return {
-    type: "SET_FILTER",
+    type: 'SET_FILTER',
     filter
   }
 }

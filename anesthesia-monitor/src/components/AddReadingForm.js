@@ -1,14 +1,15 @@
 import React from 'react'
 
 
-let AddReadingForm = ({ handleSubmit }) => {
+const AddReadingForm = ({ handleSubmit, readings }) => {
   let input
+  let i = readings.length
 
   return (
     <section>
       <form onSubmit={ (e) => {
         e.preventDefault()
-        handleSubmit(input.value)
+        handleSubmit(input.value, i)
       }}>
         <input ref={ node => { input = node }} />
         <button>Add Reading</button>

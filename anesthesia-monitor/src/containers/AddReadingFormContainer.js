@@ -8,8 +8,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps=(dispatch) => {
    return {
-     handleSubmit: (text) => {
-       dispatch(addReading(text))
+     handleSubmit: (text, id) => {
+       dispatch(addReading(text, id))
      }
    }
  }
