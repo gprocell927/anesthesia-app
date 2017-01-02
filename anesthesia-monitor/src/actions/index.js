@@ -5,3 +5,10 @@ export const addReading = (text, id) => {
     id
   }
 }
+
+export const setFilter = (filter) => {
+  return {
+    type: "SET_FILTER",
+    filter
+  }
+}
