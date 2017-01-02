@@ -8,4 +8,4 @@ const readings = (state=[], action) => {
   }
 }
 
-export default readings 
+export default readings
