@@ -1,7 +1,7 @@
-export const addReading = (text, id) => {
+export const addReading = (info, id) => {
   return {
     type: 'ADD_READING',
-    text,
+    info,
     id
   }
 }

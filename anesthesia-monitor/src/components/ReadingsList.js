@@ -12,7 +12,7 @@ const ReadingsList = ({ readings, onReadingClick }) => {
         return (
           <Reading
             key={reading.id}
-            {...reading}
+            info={reading.info}
             handleClick={() => onReadingClick(reading.id)}
           />
         )

@@ -1,7 +1,11 @@
 const readings = (state=[], action) => {
   switch (action.type) {
     case 'ADD_READING':
-      return [...state, {id: action.id, text: action.text}]
+      return [...state, {
+        id: action.id,
+        text: action.text,
+        info: action.info
+      }]
 
   default:
     return state

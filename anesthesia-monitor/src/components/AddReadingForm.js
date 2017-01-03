@@ -1,17 +1,34 @@
 import React from 'react'
 
-
 const AddReadingForm = ({ handleSubmit, readings }) => {
-  let input
+  let temp
+  let heartRate
+  let respirations
   let i = readings.length
 
   return (
     <section>
       <form onSubmit={ (e) => {
         e.preventDefault()
-        handleSubmit(input.value, i)
+
+        let info = {
+          temp: temp.value,
+          heartRate: heartRate.value,
+          respirations: respirations.value,
+        }
+
+        handleSubmit(info, i)
       }}>
-        <input ref={ node => { input = node }} />
+        <p>Temp: </p>
+        <input ref={ (node) => { temp = node }} />
+
+        <p>HR: </p>
+        <input ref={ (node) => { heartRate = node}} />
+
+        <p>Resp: </p>
+        <input ref={ (node) => { respirations = node}} />
+
+
         <button>Add Reading</button>
       </form>
     </section>

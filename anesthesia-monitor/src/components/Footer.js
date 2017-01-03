@@ -1,5 +1,5 @@
 import React from 'react'
-import FilterContainer from '../containers/FilterContainer'
+import FilterContainer from '../containers/Filter'
 
 const Footer = () => {
   return (
