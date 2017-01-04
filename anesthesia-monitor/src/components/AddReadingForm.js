@@ -19,13 +19,13 @@ const AddReadingForm = ({ handleSubmit, readings }) => {
 
         handleSubmit(info, i)
       }}>
-        <p>Temp: </p>
+        <span>Temp: </span>
         <input ref={ (node) => { temp = node }} />
 
-        <p>HR: </p>
+        <span>HR: </span>
         <input ref={ (node) => { heartRate = node}} />
 
-        <p>Resp: </p>
+        <span>Resp: </span>
         <input ref={ (node) => { respirations = node}} />
 
 

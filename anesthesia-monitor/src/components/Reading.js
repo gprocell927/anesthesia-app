@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Reading = ({ handleClick, info }) => {
+const Reading = ({ handleClick, info: { temp, heartRate, respirations } }) => {
   return (
     <li onClick={handleClick} >
-      {info.heartRate}
+      Temp: {temp},
+      HeartRate: {heartRate},
+      Respirations: {respirations}
     </li>
   )
 }

@@ -12,7 +12,11 @@ const ReadingsList = ({ readings, onReadingClick }) => {
         return (
           <Reading
             key={reading.id}
-            info={reading.info}
+            info={{
+              temp: reading.temp,
+              heartRate: reading.heartRate,
+              respirations: reading.respirations
+            }}
             handleClick={() => onReadingClick(reading.id)}
           />
         )
