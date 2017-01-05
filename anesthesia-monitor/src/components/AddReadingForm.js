@@ -11,6 +11,7 @@ const AddReadingForm = ({ handleSubmit, readings }) => {
   let meanBP
   let oxygen
   let gasFlow
+  let timestamp
   let i = readings.length
 
   return (
@@ -19,6 +20,7 @@ const AddReadingForm = ({ handleSubmit, readings }) => {
         e.preventDefault()
 
         let info = {
+          timestamp: new Date().getHours() + ":" + new Date().getMinutes(),
           temp: temp.value,
           heartRate: heartRate.value,
           respirations: respirations.value,

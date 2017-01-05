@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Reading = ({ handleClick, info: { temp, heartRate, respirations, etco2, spo2, systolicBP, diastolicBP, meanBP, oxygen, gasFlow } }) => {
+const Reading = ({ handleClick, info: { temp, heartRate, respirations, etco2, spo2, systolicBP, diastolicBP, meanBP, oxygen, gasFlow, timestamp } }) => {
   return (
     <li onClick={handleClick} >
+      Time: {timestamp},
       O2 flow: {oxygen} L,
       Gas Flow:  {gasFlow} %,
       Temp: {temp} °F,
