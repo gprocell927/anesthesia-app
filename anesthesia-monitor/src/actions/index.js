@@ -1,12 +1,30 @@
-export const addReading = (info, id) => {
+import firebase, { reference } from '../utils/firebaseClient'
+
+export const fetchReadings = () => {
+  return dispatch => {
+    firebase.on('value', snapshot => {
+      dispatch({
+        type: 'FETCH_READINGS',
+        payload: snapshot.val()
+      })
+    })
+  }
+}
+
+export const addReading = (reading) => {
   // create new record in firebase from info
     // if successful, update the redux store
     // if failure, show an error message
-  return {
-    type: 'ADD_READING',
-    info,
-    id
+  return dispatch => {
+    const id = reference.push(reading).path.o[1]
+    dispatch({
+      type: 'ADD_READING',
+      info: reading,
+      id
+    })
   }
+      // .then(res => console.log(res))
+      // .catch(err => console.error(err))
 }
 
 export const toggleReading = (id) => {

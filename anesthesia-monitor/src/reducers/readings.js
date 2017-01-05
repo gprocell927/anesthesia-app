@@ -1,7 +1,9 @@
 const readings = (state=[], action) => {
-  console.log(action)
   switch (action.type) {
+    case 'FETCH_READINGS':
+      return action.payload
     case 'ADD_READING':
+      console.log(action)
       return [...state, {
         id: action.id,
         text: action.text,

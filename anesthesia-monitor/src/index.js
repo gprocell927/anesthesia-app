@@ -1,30 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, compose } from 'redux';
-import { reactReduxFirebase } from 'react-redux-firebase';
+import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
+
 import reducers from './reducers';
 import App from './components/App';
 import './index.css';
 
-const config = {
-  apiKey: "AIzaSyAYGEL7PNQHFLObNrpc8dpKpvCHXY59zSE",
-  authDomain: "anesthesiaapp-337a3.firebaseapp.com",
-  databaseURL: "https://anesthesiaapp-337a3.firebaseio.com",
-  storageBucket: "anesthesiaapp-337a3.appspot.com",
-  messagingSenderId: "634025903164"
-}
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
-const createStoreWithFirebase = compose(
-  reactReduxFirebase(config, { reading: 'readings' }),)(createStore)
-
-let store = createStoreWithFirebase(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
-
-
+let store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 render(
-  <Provider store={ store }>
+  <Provider store={ createStoreWithMiddleware(reducers)}>
   <App />
   </Provider>,
   document.getElementById('root')
