@@ -13,9 +13,16 @@ const ReadingsList = ({ readings, onReadingClick }) => {
           <Reading
             key={reading.id}
             info={{
+              oxygen: reading.oxygen,
+              gasFlow: reading.gasFlow,
               temp: reading.temp,
               heartRate: reading.heartRate,
-              respirations: reading.respirations
+              respirations: reading.respirations,
+              etco2: reading.etco2,
+              spo2: reading.spo2,
+              systolicBP: reading.systolicBP,
+              diastolicBP: reading.diastolicBP,
+              meanBP: reading.meanBP
             }}
             handleClick={() => onReadingClick(reading.id)}
           />
