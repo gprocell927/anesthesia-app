@@ -23,7 +23,7 @@ const ReadingsList = ({ readings, onReadingClick }) => {
               systolicBP: reading.systolicBP,
               diastolicBP: reading.diastolicBP,
               meanBP: reading.meanBP,
-              timestamp: reading.times
+              timestamp: reading.timestamp
             }}
             handleClick={() => onReadingClick(reading.id)}
           />
