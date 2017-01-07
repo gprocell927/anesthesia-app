@@ -2,7 +2,7 @@ import React from 'react'
 
 const LogIn = () => {
   return (
-    <section>
+    <section className="clipboard">
       <form>
         <input value="Username" />
         <input value="Password" />
