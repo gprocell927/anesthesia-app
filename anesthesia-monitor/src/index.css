@@ -1,11 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   background: #4379C8;
 }
 
 .clipboard {
+  margin-top: 75px;
   margin:auto;
   width: 400px;
   height: 500px;
@@ -33,7 +33,7 @@ display:block;
 background: #FFFFFF;
 border: 1px solid #A4A2A2;
 border-radius: 2px;
-margin-left: 125px;
+margin-left: 115px;
 margin-bottom: 15px;
 font-family: GillSans;
 font-size: 16px;
@@ -48,7 +48,7 @@ letter-spacing: 2.18px;
   font-size: 18px;
   color: #FEFBF8;
   letter-spacing: 0;
-  margin-left: 150px;
+  margin-left: 155px;
 }
 
 .password {
