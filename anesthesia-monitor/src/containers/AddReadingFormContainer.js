@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
   return { readings: state.readings }
 }
 
-const mapDispatchToProps=(dispatch) => {
+const mapDispatchToProps = (dispatch) => {
    return {
      handleSubmit: (info) => {
        dispatch(addReading(info))

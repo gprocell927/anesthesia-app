@@ -3,7 +3,6 @@ const readings = (state=[], action) => {
     case 'FETCH_READINGS':
       return action.payload
     case 'ADD_READING':
-      console.log(action)
       return [...state, {
         id: action.id,
         text: action.text,

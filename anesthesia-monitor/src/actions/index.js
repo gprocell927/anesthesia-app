@@ -40,3 +40,14 @@ export const setFilter = (filter) => {
     filter
   }
 }
+
+export const addPatient = (patient) => {
+  return dispatch => {
+    const id = reference.push(patient).path.o[1]
+    dispatch({
+      type: 'ADD_PATIENT',
+      info: patient,
+      id
+    })
+  }
+}

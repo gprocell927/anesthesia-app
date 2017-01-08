@@ -11,7 +11,7 @@
         </filter>
     </defs>
     <g id="Combined-Shape" stroke="none" fill="none">
-        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+        <use fill="none" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
     </g>
 </svg>
