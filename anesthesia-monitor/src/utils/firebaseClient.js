@@ -16,3 +16,4 @@ const provider = new firebase.auth.GoogleAuthProvider();
 export default firebase;
 export const signIn = () => auth.signInWithPopup(provider);
 export const reference = firebase.database().ref('readings');
+export const patientReference = firebase.database().ref('patients');

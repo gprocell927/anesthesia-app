@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "jest": "^18.1.0",
     "react-scripts": "0.8.4",
     "redux-devtools": "^3.3.1"
   },
@@ -19,7 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject"
   }
 }

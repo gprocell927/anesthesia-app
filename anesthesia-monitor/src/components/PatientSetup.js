@@ -1,6 +1,7 @@
 import React from 'react'
 
 const PatientSetup = ({ handleSubmit, patients }) => {
+  console.log(patients)
   let name
   let dob
   let species

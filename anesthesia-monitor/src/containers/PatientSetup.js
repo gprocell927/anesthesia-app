@@ -3,7 +3,7 @@ import { addPatient } from '../actions'
 import PatientSetup from '../components/PatientSetup'
 
 const mapStateToProps = (state) => {
-  return { patient: state.patient }
+  return { patients: state.patients }
 }
 
 const mapDispatchToProps = (dispatch) => {
