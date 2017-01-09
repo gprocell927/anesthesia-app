@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
+  console.log('mapDispatchToProps');
   return {
     handleSubmit: (info) => {
       dispatch(addPatient(info))

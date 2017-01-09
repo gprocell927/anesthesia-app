@@ -1,4 +1,4 @@
-import firebase, { reference } from '../utils/firebaseClient'
+import firebase, { reference, patientReference } from '../utils/firebaseClient'
 
 export const fetchReadings = () => {
   return dispatch => {
@@ -43,7 +43,7 @@ export const setFilter = (filter) => {
 
 export const addPatient = (patient) => {
   return dispatch => {
-    const id = reference.push(patient).path.o[1]
+    const id = patientReference.push(patient).path.o[1]
     dispatch({
       type: 'ADD_PATIENT',
       info: patient,
