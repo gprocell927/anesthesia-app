@@ -1,22 +1,27 @@
 import React from 'react'
-import Patients from './Patient'
+import Patients from './Patients'
 
-const PatientList = ({ patients, onPatientClick}) => {
+const PatientList = ({ Patients, onPatientClick}) => {
+  if (Patients.length === 0) {
+    return (
+      <h2> No registered patients </h2>
+    )
+  }
   return(
     <ul>
-    { patients.map(patients => {
+    { Patients.map(Patients => {
       return (
-        <Patient
-          key={patients.id}
+        <Patients
+          key={Patients.id}
           info={{
-            name: patients.name,
-            dob: patients.dob,
-            species: patients.species,
-            sex: patients.sex,
-            pawarnings: patients.pawarnings,
-            behavior: patients.behavior
+            name: Patients.name,
+            dob: Patients.dob,
+            species: Patients.species,
+            sex: Patients.sex,
+            pawarnings: Patients.pawarnings,
+            behavior: Patients.behavior
           }}
-          handleClick={() => onPatientClick(patients.id)}
+          handleClick={() => onPatientClick(Patients.id)}
           />
         )
       }) }

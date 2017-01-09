@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const AddReadingForm = ({ handleSubmit, readings }) => {
   let temp
@@ -16,6 +17,11 @@ const AddReadingForm = ({ handleSubmit, readings }) => {
 
   return (
     <section>
+      <nav>
+        <Link to ="/patientform">
+          Patient Setup
+        </Link>
+      </nav>
       <form onSubmit={ (e) => {
         e.preventDefault()
 
@@ -63,8 +69,6 @@ const AddReadingForm = ({ handleSubmit, readings }) => {
         <input ref={ (node) => { diastolicBP = node}} />
         <span>Mean: </span>
         <input ref={ (node) => { meanBP = node}} />
-
-
 
         <button>Add Reading</button>
       </form>

@@ -1,15 +1,14 @@
 import React from 'react'
 
-const PatientSetup = ({ handleSubmit, patients }) => {
-  console.log(patients)
+const PatientSetup = ({ handleSubmit }) => {
   let name
   let dob
   let species
   let sex
   let pawarnings
   let behavior
-  let i = patients.length
 
+  debugger;
 
   return (
     <section>
@@ -25,9 +24,8 @@ const PatientSetup = ({ handleSubmit, patients }) => {
           behavior: behavior.value
         }
 
-        handleSubmit(info, i)
+        handleSubmit(info)
       }}>
-
         <span>Name: </span>
         <input ref={ (node) => { name = node }} />
         <span>DOB: </span>
