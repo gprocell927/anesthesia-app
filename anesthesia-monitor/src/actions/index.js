@@ -15,14 +15,13 @@ export const addReading = (reading) => {
   // create new record in firebase from info
     // if successful, update the redux store
     // if failure, show an error message
-  return dispatch => {
     const id = reference.push(reading).path.o[1]
-    dispatch({
+  return {
       type: 'ADD_READING',
       info: reading,
       id
-    })
-  }
+    }
+
       // .then(res => console.log(res))
       // .catch(err => console.error(err))
 }

@@ -7,8 +7,7 @@ const PatientSetup = ({ handleSubmit }) => {
   let sex
   let pawarnings
   let behavior
-
-  debugger;
+  let readingID
 
   return (
     <section>
@@ -16,6 +15,7 @@ const PatientSetup = ({ handleSubmit }) => {
         e.preventDefault()
 
         let info = {
+          readingID: Date.now(),
           name: name.value,
           dob: dob.value,
           species: species.value,
